@@ -29,14 +29,14 @@ const help = (pushname, prefix, temporizador, uptime, hr, tanggal, groupName, us
 ≫ Patente: ${patt}
 ═══════════════
  ♻️NOVIDADES:
-
+ukksksiis
 ❧ menu +18 use =m18
 ═══════════════
 ✅  COMANDOS NOVOS:
 
 ❧ simi
 ❧ bugreport
-❧ request
+❧ REQUESTS
 ═══════════════
 ✔ REMOVIDOS:     
 
