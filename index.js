@@ -2744,7 +2744,7 @@ reply(ptbr.stick())
 })
 .on('end', function () {
 console.log('Finish')
-exec(`webpmux -set exif ${addMetadata('Siga•no•instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 fs.unlinkSync(media)	
@@ -2772,7 +2772,7 @@ reply(`A conversão de ${tipe} para o sticker falhou`)
 })
 .on('end', function () {
 console.log('Finish')
-exec(`webpmux -set exif ${addMetadata('Siga•no•instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 fs.unlinkSync(media)
@@ -2799,7 +2799,7 @@ if (err) return reply('ocorreu um erro')
 exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 fs.unlinkSync(ranp)
 if (err) return reply(ptbr.stick())
-exec(`webpmux -set exif ${addMetadata('Siga•no•instagram', '@figurinhas_whatsapp')} ${ranw} -o ${ranw}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ranw} -o ${ranw}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: mek})
 fs.unlinkSync(ranw)
@@ -2823,7 +2823,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('Siga•no•instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 reply(ptbr.stick())
 })
@@ -2846,7 +2846,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('Siga•no•instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 tipe = media.endsWith('.mp4') ? 'video' : 'gif'
 reply(`Falha na conversão de ${tipe} para sticker`)
@@ -2964,7 +2964,7 @@ if (!isBotGroupAdmins) return reply(ptbr.Badmin())
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
-pro = 'Berhasil Promote\n'
+pro = 'Promovido com sucesso\n'
 for (let _ of mentioned) {
 pro += `@${_.split('@')[0]}\n`
 }
