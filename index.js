@@ -675,7 +675,7 @@ var patt = 'Bronze I🥉'
 if (nivelAtual === 1) {patt = 'Bronze  I🥉' } else if (nivelAtual === 2) {patt = 'Bronze II🥉'} else if (nivelAtual === 3) {patt = 'Bronze  III🥉'} else if (nivelAtual === 4) {patt = 'Bronze  IV🥉'} else if (nivelAtual === 5) {patt = 'Bronze  V🥉'} else if (nivelAtual === 6) {patt = 'Prata I🥈'} else if (nivelAtual === 7) {patt = 'Prata II🥈'} else if (nivelAtual === 8) {patt = 'Prata III🥈'} else if (nivelAtual === 9) {patt = 'Prata IV🥈'} else if (nivelAtual === 10) {patt = 'Prata V🥈'} else if (nivelAtual === 11) {patt = 'Ouro I🥇'} else if (nivelAtual === 12) {patt = 'Ouro II🥇'} else if (nivelAtual === 13) {patt = 'Ouro III🥇'} else if (nivelAtual === 14) {patt = 'Ouro IV🥇'} else if (nivelAtual === 15) {patt = 'Ouro V🥇'} else if (nivelAtual === 16) {patt = 'Campeão I🏆'} else if (nivelAtual === 17) {patt = 'Campeão II🏆'} else if (nivelAtual === 18) {patt = 'Campeão III🏆'} else if (nivelAtual === 19) {patt = 'Campeão IV🏆'} else if (nivelAtual === 20) {patt = 'Campeão V🏆'} else if (nivelAtual === 21) {patt = 'Diamante I 💎'} else if (nivelAtual === 22) {patt = 'Diamante II 💎'} else if (nivelAtual === 23) {patt = 'Diamante III 💎'} else if (nivelAtual === 24) {patt = 'Diamante IV 💎'} else if (nivelAtual === 25) {patt = 'Diamante V 💎'} else if (nivelAtual === 26) {patt = 'Mestre I 🐂'} else if (nivelAtual === 27) {patt = 'Mestre II 🐂'} else if (nivelAtual === 28) {patt = 'Mestre III 🐂'} else if (nivelAtual === 29) {patt = 'Mestre IV 🐂'} else if (nivelAtual === 30) {patt = 'Mestre V 🐂'} else if (nivelAtual === 31) {patt = 'Mítico I 🔮'} else if (nivelAtual === 32) {patt = 'Mítico II 🔮'} else if (nivelAtual === 33) {patt = 'Mítico III 🔮'} else if (nivelAtual === 34) {patt = 'Mítico IV 🔮'} else if (nivelAtual === 35) {patt = 'Mítico V 🔮'} else if (nivelAtual === 36) {patt = 'God I🕴'} else if (nivelAtual === 37) {patt = 'God II🕴'} else if (nivelAtual === 38) {patt = 'God III🕴'} else if (nivelAtual === 39) {patt = 'God IV🕴'} else if (nivelAtual === 40) {patt = 'God V🕴'} else if (nivelAtual > 41) {patt = '🛐Grande Mestre🛐'}
           
 //_TIPO DE USUÁRIO
-if (groupAdmins) {prema = 'Ademir🤓'}if (isPremium) {prema = 'Premium😎'} if (isOwner) {prema = 'El Italu🕴🏽'} if (isUser) {prema = 'Registrado 🥳'} else {var prema = 'Membro comum🗿'}
+if (groupAdmins) {prema = 'Ademir🤓'}if (isPremium) {prema = 'Premium😎'} if (isOwner) {prema = 'El Miku🕴🏽'} if (isUser) {prema = 'Registrado 🥳'} else {var prema = 'Membro comum🗿'}
 
 //_XP COM LEVELING ATIVO
 if (isGroup && isLevelingOn) {
@@ -1250,8 +1250,7 @@ break
 case 'criador':
 case 'vcard':
 case 'owner':
-case 'italu':
-case 'italo':
+case 'Miku':
 await tiringa.sendMessage(from, {displayname: "miku💅️", vcard: vcard}, MessageType.contact)
 break
                      
@@ -2744,7 +2743,7 @@ reply(ptbr.stick())
 })
 .on('end', function () {
 console.log('Finish')
-exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('@figurinhas_whatsapp', 'Instagram')} ${ran} -o ${ran}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 fs.unlinkSync(media)	
@@ -2772,7 +2771,7 @@ reply(`A conversão de ${tipe} para o sticker falhou`)
 })
 .on('end', function () {
 console.log('Finish')
-exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ran} -o ${ran}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('@figurinhas_whatsapp', 'Instagram')} ${ran} -o ${ran}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 fs.unlinkSync(media)
@@ -2799,7 +2798,7 @@ if (err) return reply('ocorreu um erro')
 exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 fs.unlinkSync(ranp)
 if (err) return reply(ptbr.stick())
-exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${ranw} -o ${ranw}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('@figurinhas_whatsapp', 'Instagram')} ${ranw} -o ${ranw}`, async (error) => {
 if (error) return reply(ptbr.stick())
 tiringa.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: mek})
 fs.unlinkSync(ranw)
@@ -2823,7 +2822,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('@figurinhas_whatsapp', 'Instagram')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 reply(ptbr.stick())
 })
@@ -2846,7 +2845,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('instagram', '@figurinhas_whatsapp')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('@figurinhas_whatsapp', 'Instagram')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 tipe = media.endsWith('.mp4') ? 'video' : 'gif'
 reply(`Falha na conversão de ${tipe} para sticker`)
@@ -2942,7 +2941,7 @@ for (let mem of groupMembers) {
 todos += `║➸@${mem.jid.split('@')[0]}\n`
 members_id.push(mem.jid)
 }
-mentions('╭╾╼◐⚋ ༒ᴍᴇɴᴄɪᴏɴᴀʀ ᴛᴏᴅᴏs ༒⚋◑╾╼╮\n║➸'+todos+'╰╾╼◐⚋⚋ ༒ breve remoção inativos ༒ ⚋⚋◑╾╼╯', members_id, true)
+mentions('╔══✪〘 Mencionando Todos 〙✪══\n╠➥'+teks+'╚═〘 em breve remoção de inativos 〙', members_id, true)
 break
 
 //_LIMPA TODOS OS CHATS
