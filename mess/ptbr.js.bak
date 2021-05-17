@@ -76,7 +76,7 @@ exports.ownerG = (ownerName) => {
 }
 
 exports.lia = () => {
-	return`Só a Miku pode usar😳👌`
+	return`Só a Lia pode usar😳👌`
 }
 
 exports.ownerB = (ownerName) => {
@@ -92,7 +92,7 @@ exports.Badmin = () => {
 }
 
 exports.registrarB = (pushname, prefix) => {
-	return`Olá ${pushname}\n\nVocê ainda não se registrou...\n\nPara se registrar e poder usar todos os comandos do bot, por favor use:\n\nComando: ${prefix}registrar seu nome|sua idade\nPor exemplo: ${prefix}registrar Miku|17`
+	return`Olá ${pushname}\n\nVocê ainda não se registrou...\n\nPara se registrar e poder usar todos os comandos do bot, por favor use:\n\nComando: ${prefix}registrar seu nome|sua idade\nPor exemplo: ${prefix}registrar Italu|17`
 }
 
 exports.nsfw = () => {
